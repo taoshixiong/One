@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7fa87f</color>
+    <color name="colorPrimaryDark">#749c74</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorTabDef">#8c8c8c</color>
+
+    <!--状态栏半透明,Home的列表Item也用到了-->
+    <color name="half_transparent">#33000000</color>
+    <color name="home_item_text_background">#2A000000</color>
+
+
+</resources>
