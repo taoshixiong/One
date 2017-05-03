@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.taosx.one.View.Home.View.QuestionInfoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <include layout="@layout/toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e8dedede">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/question_img_widgth_height"
+                    android:layout_height="@dimen/question_img_widgth_height"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_format_quote_black_48dp" />
+
+                <TextView
+                    android:id="@+id/tv_question"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/question_title_padding"
+                    android:paddingLeft="@dimen/question_title_left_padding"
+                    android:paddingRight="@dimen/question_title_padding"
+                    android:paddingTop="@dimen/question_title_padding"
+                    android:lineSpacingExtra="2dp"
+                    app:layout_constraintLeft_toRightOf="@+id/imageView"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="#e8dedede"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="60dp"-->
+            <!--android:src="@drawable/ic_format_quote_black_24dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:id="@+id/imageView" />-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:paddingLeft="6dp"-->
+            <!--android:paddingRight="30dp"-->
+            <!--android:paddingBottom="30dp"-->
+            <!--android:paddingTop="30dp"-->
+            <!--android:text="前两天和一个在外媒上班的朋友吃晚饭，年薪20万的他突然和我说他要借钱租房子了，我以为我听错了，又确认了一遍，他说，不怕你笑，我连房租都要借了，但这是真的。我开玩笑说，你年薪20万可是妥妥的中国式中产阶级啊，你钱都花哪儿了？</p><p>他叹了口气说，其实不管你赚多少钱，你都不会知道钱到底花哪儿了，什么中产阶级啊，你以为中国真的有什么稳定的中产阶级吗？只有不断维持自己是中产阶级的人。</p><p>根据我前段时间看到杂志上的某份调查报告，综合《福布斯》杂志、国家统计局和麦肯锡全球分析报告，中国将年收入10-50万年薪人群定义为新锐中产。"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_toEndOf="@+id/imageView" />-->
+            <!--</RelativeLayout>-->
+
+            <TextView
+                android:id="@+id/text_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/essay_info_textsize" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

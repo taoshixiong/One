@@ -21,7 +21,7 @@ public class HomeFragment extends Fragment {
     private TabLayoutAdapter adapter;
 
     //TabLayout标签
-    private String[] titles=new String[]{"图文","阅读","连载"};
+    private String[] titles=new String[]{"图文","阅读","连载","问答"};
 //    private String[] titles=new String[]{"图文","阅读","连载","问答","音乐"};
     private List<Fragment> fragments=new ArrayList<>();
 
@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
     private Fragment essayFragment;
     private Fragment serialcontentFragment;
     //为了上架先隐藏一些功能
-//    private Fragment questionFragment;
+    private Fragment questionFragment;
 //    private Fragment musicFragment;
 
     //保存Fragment的ID，内存不足时会销毁Activity，但是不会销毁Fragment，导致重叠，这里时保存其ID，方便在重启的时候找到其活动
@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
                 hpFragment=(Fragment) getChildFragmentManager().findFragmentById(fragmentId[0]);
                 essayFragment=(Fragment) getChildFragmentManager().findFragmentById(fragmentId[1]);
                 serialcontentFragment=(Fragment) getChildFragmentManager().findFragmentById(fragmentId[2]);
-//                questionFragment=(Fragment) getChildFragmentManager().findFragmentById(fragmentId[3]);
+                questionFragment=(Fragment) getChildFragmentManager().findFragmentById(fragmentId[3]);
 //                musicFragment=(Fragment) getChildFragmentManager().findFragmentById(fragmentId[4]);
 
                 getChildFragmentManager().beginTransaction().hide(hpFragment);
@@ -100,12 +100,12 @@ public class HomeFragment extends Fragment {
         hpFragment=HpFragment.newInstance();
         essayFragment=EssayFragment.newInstance();
         serialcontentFragment=SerialcontentFragment.newInstance();
-//        questionFragment=QuestionFragment.newInstance();
+        questionFragment=QuestionFragment.newInstance();
 //        musicFragment=MusicFragment.newInstance();
         fragments.add(hpFragment);
         fragments.add(essayFragment);
         fragments.add(serialcontentFragment);
-//        fragments.add(questionFragment);
+        fragments.add(questionFragment);
 //        fragments.add(musicFragment);
 
         adapter=new TabLayoutAdapter(getChildFragmentManager(),titles,fragments);

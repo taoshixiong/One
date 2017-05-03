@@ -11,6 +11,9 @@
     <dimen name="recycler_item_pading">6dp</dimen>
     <dimen name="view_pager_margin">12dp</dimen>
     <dimen name="essay_info_textsize">18dp</dimen>
+    <dimen name="question_img_widgth_height">60dp</dimen>
+    <dimen name="question_title_padding">30dp</dimen>
+    <dimen name="question_title_left_padding">6dp</dimen>
 
 
 </resources>

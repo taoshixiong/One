@@ -3,6 +3,8 @@ package com.taosx.one.Http.API;
 import com.taosx.one.View.Home.Entity.EssayEntity;
 import com.taosx.one.View.Home.Entity.EssayInfoEntity;
 import com.taosx.one.View.Home.Entity.ImageTextEntity;
+import com.taosx.one.View.Home.Entity.QuestionInfoEntity;
+import com.taosx.one.View.Home.Entity.QuestionListEntity;
 import com.taosx.one.View.Home.Entity.SeriacontentListEntity;
 import com.taosx.one.View.Home.Entity.SerialcontentInfoEntity;
 
@@ -63,4 +65,22 @@ public interface Api {
             @Path("id") String id
     );
 
+    /**
+     * 根据日期获取问答列表数据
+     * @param mDate
+     * @return
+     */
+    @GET("/api/question/bymonth/{mDate}")
+    Call<QuestionListEntity>getQuestionByDate(
+            @Path("mDate") String mDate
+    );
+    /**
+     * 获得问答详细信息
+     * @param id
+     * @return
+     */
+    @GET("/api/question/{id}?version=999")
+    Call<QuestionInfoEntity>getQuestionInfoByid(
+            @Path("id") String id
+    );
 }

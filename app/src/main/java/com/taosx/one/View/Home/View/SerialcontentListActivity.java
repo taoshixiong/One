@@ -31,7 +31,6 @@ public class SerialcontentListActivity extends BaseActivity implements OnSeriaco
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_serialcontent_list);
         mDate = getIntent().getStringExtra("Date");
-
         initToolbar(DateUtil.format(mDate));
         findview();
     }
